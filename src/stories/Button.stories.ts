@@ -1,42 +1,40 @@
-// also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
-import { Story, Meta } from '@storybook/angular/types-6-0';
-import Button from './button.component';
+// exported from '@storybook/angular'
+import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
+import { ButtonModule, Button } from 'primeng/button';
 
-// More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
-export default {
-  title: 'Example/Button',
+// Link: https://www.primefaces.org/primeng-v13/button
+// <button pButton type="button" label="Click" ></button>
+const meta: Meta<Button> = {
+  title: 'Example/primeNG Buttons',
   component: Button,
-  // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
+  decorators: [moduleMetadata({ imports: [ButtonModule] })],
+  render: (args) => ({
+    props: {
+      ...args,
+    },
+  }),
+};
+
+export default meta;
+
+export const Click: StoryObj<Button> = {
+  args: {
+    label: 'Click',
+    type: 'button',
   },
-} as Meta;
-
-// More on component templates: https://storybook.js.org/docs/angular/writing-stories/introduction#using-args
-const Template: Story<Button> = (args: Button) => ({
-  props: args,
-});
-
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/angular/writing-stories/args
-Primary.args = {
-  primary: true,
-  label: 'Button',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
+export const Accept: StoryObj<Button> = {
+  args: {
+    label: 'Accept',
+    type: 'button',
+  },
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
+export const Primary: StoryObj<Button> = {
+  args: {
+    label: 'Button with icon',
+    icon: 'pi pi-check',
+    iconPos: 'left',
+  },
 };

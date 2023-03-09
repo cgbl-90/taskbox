@@ -81,13 +81,23 @@
           "builder": "@storybook/angular:start-storybook",
           "options": {
             "browserTarget": "taskbox:build:development",
-            "port": 6006
+            "port": 6006,
+            "styles": [
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
+            ]
           }
         },
         "build-storybook": {
           "builder": "@storybook/angular:build-storybook",
           "options": {
-            "browserTarget": "taskbox:production"
+            "browserTarget": "taskbox:production",
+            "styles": [
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
+            ]
           }
         }
       }
