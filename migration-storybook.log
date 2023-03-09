@@ -1,0 +1,75 @@
+🔎 checking possible migrations..
+Found builder @storybook/builder-webpack5, skipping
+
+🔎 found a 'mdx1to2' migration:
+╭ Automigration detected ──────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                  │
+│   We've found 1 '.stories.mdx' files in your project.                                                            │
+│                                                                                                                  │
+│   Storybook has upgraded to MDX2 (https://mdxjs.com/blog/v2/), which contains breaking changes from MDX1.        │
+│   We can try to automatically upgrade your MDX files to MDX2 format using some common patterns.                  │
+│                                                                                                                  │
+│   After this install completes, and before you start Storybook, we strongly recommend reading the MDX2 section   │
+│   of the 7.0 migration guide. It contains useful tools for detecting and fixing any remaining issues.            │
+│                                                                                                                  │
+│   https://storybook.js.org/migration-guides/7.0                                                                  │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'mdx1to2' migration on your project? › (Y/n)✔ Do you want to run the 'mdx1to2' migration on your project? … yes
+🆗 Unmodified Introduction.stories.mdx
+✅ ran mdx1to2 migration
+
+🔎 found a 'addReact' migration:
+╭ Automigration detected ─────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                 │
+│   We've detected that you're using @storybook/addon-essentials.                                                 │
+│                                                                                                                 │
+│   Starting in Storybook 7, we now require these peer dependencies to render docs:                               │
+│                                                                                                                 │
+│   - react                                                                                                       │
+│   - react-dom                                                                                                   │
+│                                                                                                                 │
+│   We can add these for you automatically as dev dependencies.                                                   │
+│                                                                                                                 │
+│   More info: https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#react-peer-dependencies-required   │
+│                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'addReact' migration on your project? › (Y/n)✔ Do you want to run the 'addReact' migration on your project? … yes
+✅ ran addReact migration
+
+⚠️  failed to check fix angular-builders
+
+Error: ❌ Your project uses Angular < 14.0.0. Storybook 7.0 for Angular requires Angular 14.0.0 or higher. 
+Please upgrade your Angular version to at least version 14.0.0 to use Storybook 7.0 in your project.
+    at Object.check (/Users/camy-chroma/.npm/_npx/eb8bf615e50a412a/node_modules/@storybook/cli/dist/generate.js:303:787)
+    at automigrate (/Users/camy-chroma/.npm/_npx/eb8bf615e50a412a/node_modules/@storybook/cli/dist/generate.js:325:1229)
+    at async Command.<anonymous> (/Users/camy-chroma/.npm/_npx/eb8bf615e50a412a/node_modules/@storybook/cli/dist/generate.js:447:2802)
+
+╭ Migration check ran with failures ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                     │
+│                                                                                                                                                     │
+│   Successful migrations:                                                                                                                            │
+│                                                                                                                                                     │
+│   mdx1to2, addReact                                                                                                                                 │
+│                                                                                                                                                     │
+│   Failed migrations:                                                                                                                                │
+│                                                                                                                                                     │
+│   angular-builders:                                                                                                                                 │
+│   ❌ Your project uses Angular < 14.0.0. Storybook 7.0 for Angular requires Angular 14.0.0 or higher.                                               │
+│   Please upgrade your Angular version to at least version 14.0.0 to use Storybook 7.0 in your project.                                              │
+│                                                                                                                                                     │
+│                                                                                                                                                     │
+│   You can find the full logs in /Users/camy-chroma/GitHub/taskbox/migration-storybook.log                                                           │
+│                                                                                                                                                     │
+│   ─────────────────────────────────────────────────                                                                                                 │
+│                                                                                                                                                     │
+│   If you'd like to run the migrations again, you can do so by running 'npx storybook@next automigrate'                                              │
+│                                                                                                                                                     │
+│   The automigrations try to migrate common patterns in your project, but might not contain everything needed to migrate to the latest version of    │
+│   Storybook.                                                                                                                                        │
+│                                                                                                                                                     │
+│   Please check the changelog and migration guide for manual migrations and more information: https://storybook.js.org/migration-guides/7.0          │
+│   And reach out on Discord if you need help: https://discord.gg/storybook                                                                           │
+│                                                                                                                                                     │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
