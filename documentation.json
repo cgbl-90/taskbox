@@ -405,7 +405,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "StoryObj<Button>",
-                "defaultValue": "{\n  args: {\n    label: 'Accept',\n    type: 'button',\n  },\n}"
+                "defaultValue": "{\n  args: {\n    label: 'Accept',\n    icon: 'pi pi-check',\n    iconPos: 'left',\n  },\n}"
             },
             {
                 "name": "Click",
@@ -415,7 +415,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "StoryObj<Button>",
-                "defaultValue": "{\n  args: {\n    label: 'Click',\n    type: 'button',\n  },\n}"
+                "defaultValue": "{\n  args: {\n    label: 'Click',\n    icon: 'pi pi-times',\n    iconPos: 'right',\n  },\n}"
             },
             {
                 "name": "environment",
@@ -531,7 +531,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "StoryObj<Button>",
-                    "defaultValue": "{\n  args: {\n    label: 'Accept',\n    type: 'button',\n  },\n}"
+                    "defaultValue": "{\n  args: {\n    label: 'Accept',\n    icon: 'pi pi-check',\n    iconPos: 'left',\n  },\n}"
                 },
                 {
                     "name": "Click",
@@ -541,7 +541,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "StoryObj<Button>",
-                    "defaultValue": "{\n  args: {\n    label: 'Click',\n    type: 'button',\n  },\n}"
+                    "defaultValue": "{\n  args: {\n    label: 'Click',\n    icon: 'pi pi-times',\n    iconPos: 'right',\n  },\n}"
                 },
                 {
                     "name": "meta",

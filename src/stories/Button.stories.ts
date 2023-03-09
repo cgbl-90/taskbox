@@ -15,19 +15,25 @@ const meta: Meta<Button> = {
   }),
 };
 
+/*
+
+*/
+
 export default meta;
 
 export const Click: StoryObj<Button> = {
   args: {
     label: 'Click',
-    type: 'button',
+    icon: 'pi pi-times',
+    iconPos: 'right',
   },
 };
 
 export const Accept: StoryObj<Button> = {
   args: {
     label: 'Accept',
-    type: 'button',
+    icon: 'pi pi-check',
+    iconPos: 'left',
   },
 };
 
